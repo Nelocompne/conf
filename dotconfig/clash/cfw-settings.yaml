@@ -1,0 +1,36 @@
+showNewVersionIcon: true
+hideAfterStartup: true
+randomControllerPort: true
+runTimeFormat: "hh : mm : ss"
+trayOrders:
+  - - icon
+  - - status
+    - traffic
+    - text
+hideTrayIcon: false
+mixinText: |-
+  mixin: # object
+    dns:
+      enable: true
+      enhanced-mode: redir-host
+      nameserver:
+        - 119.29.29.29
+        - 223.5.5.5
+        - 114.114.114.114
+        - https://doh.pub/dns-query
+        - tls://dns.alidns.com
+      fallback:
+        - 8.8.8.8
+        - 1.1.1.1
+        - 77.88.8.8
+        - https://dns.google/dns-query
+        - tls://one.one.one.one
+
+    tun:
+      enable: true
+      stack: gvisor
+      auto-detect-interface: true
+      auto-route: true
+      dns-hijack:
+        - 198.18.0.2:53
+theme: 0
