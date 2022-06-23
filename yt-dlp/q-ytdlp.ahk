@@ -3,8 +3,6 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-
-for n, URLS in A_Args
-{
-    Run yt-dlp --config-location yt-dlp.conf %URLS%
-}
+ConfFile := A_Args[1]
+URL := A_Args[2]
+Run yt-dlp --config-location %ConfFile% %URL%
