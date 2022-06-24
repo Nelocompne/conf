@@ -1,4 +1,7 @@
+# BT
 PROCESS-NAME,tixati.exe
+# QQ
 PROCESS-NAME,QQ.exe
 PROCESS-NAME,QQGuild.exe
+# game
 PROCESS-NAME,left4dead2.exe
